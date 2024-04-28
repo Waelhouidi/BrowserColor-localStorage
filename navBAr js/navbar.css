@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+align-items: center;
+background-color: #252839;}
+h2{
+    position: relative;
+    font-size: 14vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+    &::before{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: #0ef;
+        -webkit-text-stroke: 0vw #383d52;
+
+        border-right: 2px solid #0ef;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+    }
+    @keyframes animate {
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90%{
+            width:100%;
+        }
+    }
+}
+.navbar{
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    width: 19%;
+    padding: 5px;
+
+}
+span, .dd1{
+    color: aqua;
+    padding: 2px;
+    width: 20px;
+}
+li{
+    border: 1px solid red;
+    list-style: none;
+    padding: 20px;
+    &:hover{
+        background-color: rgb(0, 183, 255);
+    }
+}
+.close{
+    border: none; 
+    position: relative;
+    left:120px;
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    
+    &:hover{
+        color: rgb(3, 2, 3);
+        background-color: rgb(230, 135, 135);
+    }
+
+}
+.open{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    >span{
+        height: 20px;
+        width: 22px;
+     color: red;
+     border-top: 5px solid black;
+    }
+    &:hover{
+        color: rgb(3, 2, 3);
+        background-color: rgb(230, 135, 135);
+    }
+}
+.hide{
+    display: none;
+}
+.setColor{
+    display: flex;
+    justify-content: center;
+}
+button{
+    border: none;
+    outline: none;
+    margin: 20px ;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid;
+    &:hover{
+        transform: scale(1.1);
+      
+    }
+}
+#red{
+    background-color: rgb(214, 43, 43)
+
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
